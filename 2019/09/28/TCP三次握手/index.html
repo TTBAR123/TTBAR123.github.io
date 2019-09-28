@@ -6,19 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>hello world  | Hexo</title>
+  <title>TCP三次握手 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="12345public class hellodemo&amp;#123;	public static void main(String[]args)&amp;#123;    	system.out.println(&quot;hello world&quot;);   &amp;#125;&amp;#125;">
+  <meta name="description" content="客户端发送SYN包（seq=x），进入SYN_SENT状态，等待服务器端确认。（SYN：同步序列编号（Synchronize Sequence Numbers）） 服务器端收到SYN包，同时发送自己的SYN包(seq=y)和ack=x+1，并进入SYN_RECV状态。 客户端收到服务端的SYN+ACK包，向服务器端发送SYN（ack=y+1）此包发送完毕，客户端和服务器进入ESTABLISHED">
 <meta property="og:type" content="article">
-<meta property="og:title" content="hello world ">
-<meta property="og:url" content="http://yoursite.com/2019/09/24/jvm/index.html">
+<meta property="og:title" content="TCP三次握手">
+<meta property="og:url" content="http://yoursite.com/2019/09/28/TCP三次握手/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="12345public class hellodemo&amp;#123;	public static void main(String[]args)&amp;#123;    	system.out.println(&quot;hello world&quot;);   &amp;#125;&amp;#125;">
+<meta property="og:description" content="客户端发送SYN包（seq=x），进入SYN_SENT状态，等待服务器端确认。（SYN：同步序列编号（Synchronize Sequence Numbers）） 服务器端收到SYN包，同时发送自己的SYN包(seq=y)和ack=x+1，并进入SYN_RECV状态。 客户端收到服务端的SYN+ACK包，向服务器端发送SYN（ack=y+1）此包发送完毕，客户端和服务器进入ESTABLISHED">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-09-27T04:37:24.403Z">
+<meta property="og:updated_time" content="2019-09-28T09:03:12.349Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="hello world ">
-<meta name="twitter:description" content="12345public class hellodemo&amp;#123;	public static void main(String[]args)&amp;#123;    	system.out.println(&quot;hello world&quot;);   &amp;#125;&amp;#125;">
+<meta name="twitter:title" content="TCP三次握手">
+<meta name="twitter:description" content="客户端发送SYN包（seq=x），进入SYN_SENT状态，等待服务器端确认。（SYN：同步序列编号（Synchronize Sequence Numbers）） 服务器端收到SYN包，同时发送自己的SYN包(seq=y)和ack=x+1，并进入SYN_RECV状态。 客户端收到服务端的SYN+ACK包，向服务器端发送SYN（ack=y+1）此包发送完毕，客户端和服务器进入ESTABLISHED">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -154,27 +154,32 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-jvm" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-TCP三次握手" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      hello world 
+      TCP三次握手
     </h1>
   
 
         
-        <a href="/2019/09/24/jvm/" class="archive-article-date">
-  	<time datetime="2019-09-24T04:24:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-24</time>
+        <a href="/2019/09/28/TCP三次握手/" class="archive-article-date">
+  	<time datetime="2019-09-28T08:40:55.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-28</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">hellodemo</span></span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[]args)</span></span>&#123;</span><br><span class="line">    	system.out.println(<span class="string">"hello world"</span>);</span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        <ul>
+<li>客户端发送SYN包（seq=x），进入SYN_SENT状态，等待服务器端确认。（SYN：同步序列编号（Synchronize Sequence Numbers））</li>
+<li>服务器端收到SYN包，同时发送自己的SYN包(seq=y)和ack=x+1，并进入SYN_RECV状态。</li>
+<li>客户端收到服务端的SYN+ACK包，向服务器端发送SYN（ack=y+1）此包发送完毕，客户端和服务器进入ESTABLISHED（TCP连接成功）状态，完成三次握手。</li>
+</ul>
+
       
 
       
@@ -253,7 +258,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/09/24/jvm/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/09/28/TCP三次握手/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -267,15 +272,11 @@
   
 <nav id="article-nav">
   
-    <a href="/2019/09/27/jvm调参/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          jvm调参
-        
-      </div>
-    </a>
   
+    <a href="/2019/09/27/用浏一个应用层的数据包览器请求一个链接的时候，经历了哪些过程/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">浏览器请求一个链接的时候，经历了哪些过程 ?</div>
+      <i class="icon-circle-right"></i>
+    </a>
   
 </nav>
 
